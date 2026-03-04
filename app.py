@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 st.title("📊 Store Sales Predictor")
 
-model = pickle.load(open("model/model.pkl", "rb"))
+model = joblib.load("model/model.joblib")
 
 st.sidebar.header("Input Data")
 
